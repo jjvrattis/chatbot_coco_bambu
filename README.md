@@ -1,6 +1,6 @@
-# Chatbot Marmiratria - Interface Web
+# Chatbot Coco Bambu - Interface Web
 
-Interface web moderna para o chatbot da Marmiratria, integrado com WhatsApp e sistema de pedidos via Python.
+Interface web moderna para o chatbot do Coco Bambu, integrado com WhatsApp e sistema de pedidos via Python.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -226,7 +226,7 @@ curl -X POST http://localhost:3001/api/chat/message \
 
 ## 📄 Licença
 
-Este projeto é privado e pertence à Marmiratria.
+Este projeto é OpenSource
 
 ## 📞 Suporte
 
