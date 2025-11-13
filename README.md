@@ -6,7 +6,7 @@ Interface web moderna para o chatbot da Marmiratria, integrado com WhatsApp e si
 
 - **Frontend**: React 18 + TypeScript + Tailwind CSS
 - **Backend**: Node.js + Express + TypeScript + Socket.io
-- **Integração**: Python Flask (App.py existente)
+ - **Integração**: Python Flask (`python/App.py`)
 - **Deploy**: Vercel
 
 ## 📋 Funcionalidades
@@ -67,7 +67,7 @@ pnpm install
 
 ```bash
 # Em outro terminal
-python App.py
+python python/App.py
 ```
 
 ### 5. Execute o projeto
@@ -100,8 +100,9 @@ Chatbot_IA/
 │   └── lib/              # Utilitários
 │       └── utils.ts
 ├── public/                # Arquivos estáticos
-├── App.py                 # Backend Python existente
-├── bot_simples.py        # Lógica do chatbot Python
+├── python/               # Backend Python
+│   ├── App.py            # Servidor Flask
+│   └── bot_simples.py    # Lógica do chatbot
 ├── package.json          # Dependências Node.js
 ├── tsconfig.json         # Config TypeScript frontend
 ├── tsconfig.server.json  # Config TypeScript backend
@@ -184,7 +185,7 @@ pnpm lint
 
 ### Adicionar novos pratos
 
-Edite o arquivo `bot_simples.py` e modifique o dicionário `CARDAPIO`:
+Edite o arquivo `python/bot_simples.py` e modifique o dicionário `CARDAPIO`:
 
 ```python
 CARDAPIO = {
@@ -195,13 +196,13 @@ CARDAPIO = {
 
 ### Modificar mensagens
 
-As mensagens do bot estão nos métodos da classe `BotSimples` em `bot_simples.py`.
+As mensagens do bot estão nos métodos da classe `BotSimples` em `python/bot_simples.py`.
 
 ## 🐛 Troubleshooting
 
 ### Problemas comuns
 
-1. **Backend Python não conecta**: Verifique se o App.py está rodando na porta 8001
+1. **Backend Python não conecta**: Verifique se `python/App.py` está rodando na porta 8001
 2. **CORS errors**: Verifique as configurações de CORS no backend
 3. **Variáveis de ambiente**: Certifique-se de que todas as variáveis estão configuradas
 4. **Portas em uso**: Verifique se as portas 5173 (frontend) e 3001 (backend) estão livres
